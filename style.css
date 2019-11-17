@@ -1,0 +1,184 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+	background: black;
+	cursor: none;
+}
+#cursor
+{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	box-sizing: border-box;
+	transition: 0.1s;
+	transform: translate(-50%,-50%);
+	border-radius: 50%;
+	pointer-events: none;
+
+}
+#cursor1
+{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	box-sizing: border-box;
+	transition: 0.1s;
+	transform: translate(50%,50%);
+	border-radius: 50%;
+	pointer-events: none;
+
+}
+#box:hover ~ #cursor
+{
+	width: 100px;
+	height: 100px;
+	border: 1px dashed white;
+	animation: animate 5s linear infinite;
+	background :none;
+}
+@keyframes animate
+{
+	0%
+	{
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+	100%
+	{
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+#box2:hover ~ #cursor
+{
+	width: 100px;
+	height: 100px;
+	border: 1px dashed white;
+	animation: animate 5s linear infinite;
+	background :none;
+}
+@keyframes animate
+{
+	0%
+	{
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+	100%
+	{
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+#box3:hover ~ #cursor
+{
+	width: 100px;
+	height: 100px;
+	border: 1px dashed white;
+	animation: animate 5s linear infinite;
+	background :none;
+}
+@keyframes animate
+{
+	0%
+	{
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+	100%
+	{
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+#box
+{
+	width: 25%;
+	height: 100%;
+	background: black;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+#box2
+{
+	width: 25%;
+	height: 100%;
+	background: black;
+	position: absolute;
+	top: 0;
+	right: 25%;
+
+}
+#box3
+{
+	width: 25%;
+	height: 50%;
+	background: black;
+	position: absolute;
+	top: 0;
+	right: 0%;
+
+}
+#star
+{
+	font-size: 10px;
+	box-sizing: border-box;
+	transition: 0.1s;
+	transform: translate(-30%,-30%);
+	pointer-events: none;
+	color: yellow;
+}
+#box:hover ~ #star
+{
+	font-size: 50px;
+	animation: animate 5s linear infinite;
+}
+.checked
+{
+	color: yellow;
+	position: absolute;
+}
+#star1
+{
+	font-size: 30px;
+	transition: 0.1s;
+	transform: translate(70%,70%);
+	pointer-events: none;
+	opacity: 0;
+}
+#box:hover ~ #star1
+{
+	font-size: 5px;
+	animation: animatee 2s linear infinite;
+	opacity: 1;
+}
+@keyframes animatee
+{
+	0%
+	{
+		transform: translate(70%,70%) rotate(360deg);
+	}
+	100%
+	{
+		transform: translate(800%,200%) rotate(180deg);
+	}
+}
+#box2:hover ~ #star1
+{
+	font-size: 30px;
+	animation: animateee 2s linear infinite;
+	opacity: 1;
+}
+@keyframes animateee
+{
+	0%
+	{
+		transform: translate(70%,70%) rotate(0deg);
+	}
+	100%
+	{
+		transform: translate(70%,70%) rotate(360deg);
+	}
+}
